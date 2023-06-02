@@ -1,0 +1,23 @@
+﻿@page
+@model IndexModel
+@{
+    ViewData["Title"] = "Home page";
+}
+
+<link href='https://fonts.googleapis.com/css?family=Montserrat' rel='stylesheet' type='text/css'>
+
+<div class="login">
+    <h2 class="active"> Admin </h2>
+    
+    <form method="post" asp-page="Index">
+        <input type="text" class="text" name="username" asp-for="@Model.LoginModel.Username">
+        <span>Username</span>
+        <br>
+        <br>
+        <input type="password" class="text" name="password" asp-for="@Model.LoginModel.Password">
+        <span>Password</span>
+        <br>
+        <hr>
+        <button class="signin" asp-page-handler="LogIn">Sign In</button>
+    </form>
+</div>
